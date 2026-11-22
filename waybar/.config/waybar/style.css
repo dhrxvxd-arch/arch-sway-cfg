@@ -8,12 +8,12 @@
 }
 
 window#waybar {
-  background: #202020;
+  background: #000000;
   color: #9b8d7f;
 }
 
 tooltip {
-  background-color: #202020;
+  background-color: #000000;
 }
 
 #clock,
@@ -34,11 +34,11 @@ tooltip {
 
 #workspaces button.focused {
   background-color: #9b8d7f;
-  color: #202020;
+  color: #000000;
 }
 
 #workspaces button.active {
-  background-color: #202020;
+  background-color: #000000;
   color: #9b8d7f;
 }
 

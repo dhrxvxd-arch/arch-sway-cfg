@@ -1,5 +1,5 @@
 
-set $mod Mod1
+set $mod Mod4
 set $left h
 set $down j
 set $up k
@@ -10,14 +10,19 @@ set $screenshot grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%
 
 font pango:Iosevka Nerd Font 12
 
-exec_always --no-startup-id pkill waybar; waybar &
+xwayland enable
+
+exec waybar &
+exec awww-daemon &
 
 default_border normal 1
 default_floating_border normal 1
 for_window [app_id="kitty"] border pixel 1
 
+output * bg /home/dhrxv/wallpaper.jpg fill
+
 gaps inner 0
-gaps outer 24
+gaps outer 0
 
 floating_modifier $mod normal
 
@@ -76,10 +81,10 @@ bindsym $mod+Shift+0 move container to workspace number 10
 
 bindsym $mod+f fullscreen
 
-bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
-bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
-bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
-bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+bindsym --locked XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindsym --locked XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+bindsym --locked XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
 bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym --locked XF86AudioPause exec playerctl play-pause
