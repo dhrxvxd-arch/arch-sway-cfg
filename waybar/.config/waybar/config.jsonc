@@ -22,6 +22,8 @@
     "custom/separator",
     "memory",
     "custom/separator",
+    "pulseaudio",
+    "custom/separator",
     "clock"
   ],
   "sway/window": {
@@ -33,14 +35,14 @@
   },
   "cpu": {
     "format": "cpu {usage}%",
-    "interval": 2,
+    "interval": 1,
     "states": {
       "critical": 90
     }
   },
   "memory": {
     "format": "mem {percentage}%",
-    "interval": 2,
+    "interval": 1,
     "states": {
       "critical": 80
     }
@@ -49,8 +51,8 @@
     "format-wifi": "wifi {bandwidthDownBits}",
     "format-ethernet": "enth {bandwidthDownBits}",
     "format-disconnected": "no network",
-    "interval": 5,
-    "tooltip": false
+    "interval": 1,
+    "tooltip": false,
   },
   "pulseaudio": {
     "scroll-step": 5,
@@ -59,9 +61,11 @@
     "format-bluetooth": "vol {volume}%",
     "nospacing": 1,
     "on-click": "pavucontrol",
-    "tooltip": false
+    "tooltip": false,
+    "interval": 1,
   },
   "clock": {
-    "format": "{:%a %d %b  %H:%M:%S}"
+    "format": "{:%a %d %b  %H:%M:%S}",
+    "interval": 1,
   }
 }

@@ -47,7 +47,7 @@ c.fonts.hints = "bold 11pt 'Iosevka Nerd Font'"
 c.fonts.web.family.fixed = "Iosevka Nerd Font"
 
 bg = "#000000"
-bg_alt = "#121212"
+bg_alt = "#000000"
 bg_brighter = "#222222"
 fg = "#c1c1c1"
 fg_darker = "#999999"
