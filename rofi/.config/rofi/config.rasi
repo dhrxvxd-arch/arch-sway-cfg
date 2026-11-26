@@ -54,8 +54,8 @@ window {
     border-color:     #9b8d7f;
     border-radius:    0px;
     padding:          6px;
-    width:            864px;
-    height:           468px;
+    width:            720px;
+    height:           500px;
 }
 
 mainbox {
