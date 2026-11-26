@@ -22,10 +22,10 @@ config.bind('<Ctrl-t>', 'open -t')
 config.bind('<Ctrl-w>', 'tab-close')
 
 c.url.searchengines = {
-    'DEFAULT': 'https://www.google.com/search?q={}',
+    'DEFAULT': 'https://www.duckduckgo.com/search?q={}',
     'aw': 'https://archlinux.org/search/?q={}',
     'yt': 'https://www.youtube.com/results?search_query={}',
-    'g': 'https://www.google.com/search?q={}'
+    'g': 'https://www.duckduckgo.com/search?q={}'
 }
 
 config.bind('M', 'hint links spawn mpv {hint-url}')
