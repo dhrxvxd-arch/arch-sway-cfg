@@ -43,6 +43,5 @@ tooltip {
 }
 
 #battery, #tray, #clock, #cpu, #pulseaudio, #memory {
-  /* background-color: none; */
   color: #9b8d7f;
 }

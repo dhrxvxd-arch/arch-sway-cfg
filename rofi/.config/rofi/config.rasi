@@ -1,180 +1,192 @@
-
-
 configuration {
-	font: "Iosevka Term 12";
-  display-drun: "λ";
-  timeout {
-      action: "kb-cancel";
-      delay:  0;
-  }
-  filebrowser {
-      directories-first: true;
-      sorting-method:    "name";
-  }
+    font:                   "Iosevka Term 12";
+    display-drun:           "λ";
+
+    timeout {
+        action:             "kb-cancel";
+        delay:              0;
+    }
+
+    filebrowser {
+        directories-first:  true;
+        sorting-method:     "name";
+    }
 }
 
 * {
-    foreground:                  #c1c1c1;
-    background:                  #202020;
-    border-color:                #444444;
-    separatorcolor:              #444444;
+    background:             #090909;
+    foreground:             #9b8d7f;
+    border-color:            #9b8d7f;
+    separatorcolor:          #9b8d7f;
+    spacing:                 3;
 
-    normal-foreground:           #c1c1c1;
-    normal-background:           #202020;
-    
-    active-foreground:           #202020;
-    active-background:           #202020;
-    
-    urgent-foreground:           #5f8787;
-    urgent-background:           #202020;
+    normal-foreground:       #9b8d7f;
+    normal-background:      #090909;
 
-    selected-normal-foreground:  #c1c1c1;
-    selected-normal-background:  #202020;
-    
-    selected-active-foreground:  #202020;
-    selected-active-background:  #888888;
-    
-    selected-urgent-foreground:  #202020;
-    selected-urgent-background:  #5f8787;
+    active-foreground:       #9b8d7f;
+    active-background:      #151515;
 
-    alternate-normal-foreground: #c1c1c1;
-    alternate-normal-background: #121212;
+    urgent-foreground:       #83a598;
+    urgent-background:      #090909;
 
-    alternate-active-foreground: #999999;
-    alternate-active-background: #202020;
+    selected-normal-foreground: #9b8d7f;
+    selected-normal-background: #202020;
 
-    alternate-urgent-foreground: #5f8787;
-    alternate-urgent-background: #121212;
+    selected-active-foreground: #9b8d7f;
+    selected-active-background: #252525;
 
-    spacing:                     2;
+    selected-urgent-foreground: #090909;
+    selected-urgent-background: #83a598;
+
+    alternate-normal-foreground: #9b8d7f;
+    alternate-normal-background: #0e0e0e;
+
+    alternate-active-foreground: #9b8d7f;
+    alternate-active-background: #151515;
+
+    alternate-urgent-foreground: #83a598;
+    alternate-urgent-background: #0e0e0e;
 }
 
 window {
-    background-color: #202020;
-    border:           0;
-    padding:          0px;
+    background-color: #090909;
+    border:           1px;
+    border-color:     #9b8d7f;
+    border-radius:    0px;
+    padding:          6px;
 }
 
 mainbox {
     border:           0;
-    padding:          0;
+    padding:          2px;
+    spacing:          4px;
 }
 
 message {
-    border:           1px dash 0px 0px;
-    padding:          1px;
+    border:           0px 0px 1px 0px;
+    border-color:     #9b8d7f;
+    padding:          3px;
 }
 
 textbox {
-    text-color:       #c1c1c1;
+    text-color:       #9b8d7f;
 }
 
 listview {
-    fixed-height:     0;
-    border:           0px solid 0px 0px;
+    fixed-height:     false;
+    border:           0;
     spacing:          2px;
     scrollbar:        false;
-    padding:          2px 0px 0px;
+    padding:          2px 0px;
+}
+
+element {
+    padding:          3px 5px;
+    border-radius:    0px;
+    spacing:          4px;
 }
 
 element normal.normal {
-    background-color: #202020;
+    background-color: #090909;
     text-color:       #9b8d7f;
 }
 
 element normal.urgent {
-    background-color: #202020;
-    text-color:       #5f8787;
+    background-color: #090909;
+    text-color:       #83a598;
 }
 
 element normal.active {
-    background-color: #202020;
-    text-color:       #999999;
+    background-color: #151515;
+    text-color:       #9b8d7f;
 }
 
 element selected.normal {
-    background-color: #000000;
-    text-color:       #c1c1c1;
+    background-color: #202020;
+    text-color:       #9b8d7f;
 }
 
 element selected.urgent {
-    background-color: #5f8787;
-    text-color:       #000000;
+    background-color: #83a598;
+    text-color:       #090909;
 }
 
 element selected.active {
-    background-color: #000000;
+    background-color: #252525;
     text-color:       #9b8d7f;
 }
 
 element alternate.normal {
-    background-color: #202020;
+    background-color: #0e0e0e;
     text-color:       #9b8d7f;
 }
 
 element alternate.urgent {
-    background-color: #202020;
-    text-color:       #5f8787;
+    background-color: #0e0e0e;
+    text-color:       #83a598;
 }
 
 element alternate.active {
-    background-color: #121212;
-    text-color:       #999999;
+    background-color: #151515;
+    text-color:       #9b8d7f;
 }
 
 element-text {
-  highlight: underline #9b8d7f;
+    highlight:        underline #83a598;
 }
 
 scrollbar {
-    width:            4px;
+    width:            2px;
     border:           0;
-    handle-color:     #444444;
-    handle-width:     8px;
+    handle-color:     #505050;
+    handle-width:     2px;
     padding:          0;
 }
 
 sidebar {
-    border:           0px dash 0px 0px;
+    border:           0px 1px 0px 0px;
+    border-color:     #9b8d7f;
 }
 
 button {
-    spacing:          0;
-    text-color:       #c1c1c1;
+    spacing:          3px;
+    text-color:       #9b8d7f;
 }
 
 button selected {
     background-color: #202020;
-    text-color:       #c1c1c1;
+    text-color:       #9b8d7f;
 }
 
 inputbar {
-    spacing:          0px;
-    text-color:       #c1c1c1;
-    padding:          1px;
+    background-color: #111111;
+    spacing:          4px;
+    text-color:       #9b8d7f;
+    padding:          5px;
+    border:           0px 0px 1px 0px;
+    border-color:     #9b8d7f;
     children:         [ prompt, textbox-prompt-colon, entry, case-indicator ];
 }
 
 case-indicator {
     spacing:          0;
-    text-color:       #c1c1c1;
+    text-color:       #83a598;
 }
 
 entry {
     spacing:          0;
-    text-color:       #c1c1c1;
-    cursor-width: 1ch;
+    text-color:       #9b8d7f;
+    cursor-width:     1ch;
 }
 
 prompt {
     spacing:          0;
-    text-color:       #c1c1c1;
+    text-color:       #9b8d7f;
 }
 
 textbox-prompt-colon {
     expand:           false;
     str:              "";
     margin:           0px 0.3em 0px 0px;
-    text-color:       inherit;
+    text-color:       #9b8d7f;
 }
-

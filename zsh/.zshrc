@@ -24,6 +24,8 @@ alias -g n='nvim'
 alias ls='eza --icons=always --color=always --git'
 alias ll='eza -lah --icons=always --git'
 
+alias ts='$HOME/.local/bin/tmux-sessionizer'
+
 eval "$(zoxide init zsh)"
 alias cd='z'
 
